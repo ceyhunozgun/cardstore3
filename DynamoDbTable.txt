@@ -1,0 +1,4 @@
+aws dynamodb create-table --endpoint-url http://192.168.99.100:9000 --table-name User --attribute-definitions AttributeName=username,AttributeType=S --key-schema AttributeName=username,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+
+aws dynamodb create-table --endpoint-url http://192.168.99.100:9000 --table-name Card --attribute-definitions AttributeName=owner,AttributeType=S AttributeName=name,AttributeType=S --key-schema AttributeName=owner,KeyType=HASH AttributeName=name,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 
+
